@@ -1,0 +1,82 @@
+body,html{
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.slideShow{
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+img{
+  width: 100px;
+  height: 100px;
+}
+.container{
+  height: 250px;
+  width: 500px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  min-width: 500px;
+  /* align-items: center; */
+  justify-content: center;
+}
+.image{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  /* transform: translate(100%,0); */
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  transition: all 0.7s linear;
+}
+.visible{
+  /* transform: translate(0,0); */
+  opacity: 1;
+  transition: all 0.7s linear;
+}
+
+/* Arrow */
+  .slideshowArrow {
+    cursor: pointer;    
+    color: #ffffff91;
+    transform: scaley(1.3);
+    font-size: 2.5rem;
+    transition: opacity 0.2s ease-in-out;
+  }
+  .slideshowArrow:hover {
+    opacity: 0.75;
+  }
+  .arrows{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 2s 2s ease-in-out;
+  }
+  .container:hover>.arrows{
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
+  }
+/**/
+
+/* Circles */
+  .slideshowCircles {
+    display: flex;
+    position: absolute;
+    align-items: flex-end;
+    height: 100%;
+    /* padding: 10px; */
+  }
+
+  .fa-circle{
+    font-size: 0.7rem;
+    margin: 0.3rem;
+    color: #fff;
+  }
+/**/
